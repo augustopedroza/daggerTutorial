@@ -1,7 +1,7 @@
 interface Command {
     val key: String
 
-    fun handleInput(inputs: List<String>): Status
+    fun handleInput(input: List<String>): Status
 
     enum class Status {
         INVALID,
