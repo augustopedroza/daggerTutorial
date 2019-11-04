@@ -2,7 +2,9 @@
 import java.math.BigDecimal
 import javax.inject.Inject
 import java.util.HashMap
+import javax.inject.Singleton
 
+@Singleton
 class Database @Inject constructor() {
     private val accounts = HashMap<String, Account>()
 
@@ -10,8 +12,8 @@ class Database @Inject constructor() {
         return accounts.getOrPut(username, { Account(username) })
     }
 
-    class Account(private val username: String) {
-        private val balance = BigDecimal.ZERO
+    class Account(internal val username: String) {
+        internal var balance = BigDecimal.ZERO
 
         fun username(): String {
             return username
@@ -19,6 +21,10 @@ class Database @Inject constructor() {
 
         fun balance(): BigDecimal {
             return balance
+        }
+
+        fun deposit(amount: BigDecimal) {
+            balance += amount
         }
     }
 }
