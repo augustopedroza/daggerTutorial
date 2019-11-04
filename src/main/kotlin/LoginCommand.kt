@@ -1,12 +1,13 @@
 import Command.Status
 import javax.inject.Inject
 
-class LoginCommand @Inject constructor(private val outputter: Outputter): SingleArgCommand() {
+class LoginCommand @Inject constructor(private val database: Database, private val outputter: Outputter): SingleArgCommand() {
 
     override val key: String = "login"
 
     public override fun handleArg(username: String): Status {
-        outputter.output("$username is logged in.")
+        val account = database.getAccount(username)
+        outputter.output("$username is logged in with balance ${account.balance()}")
         return Status.HANDLED
     }
 }
