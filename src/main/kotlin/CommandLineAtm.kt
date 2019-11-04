@@ -2,8 +2,8 @@ import java.util.*
 
 fun main() {
     val scanner = Scanner(System.`in`)
-    val commandRouter = CommandRouter()
-
+    val commandRouterFactory = DaggerCommandRouterFactory.create()
+    val commandRouter = commandRouterFactory.router()
     while (scanner.hasNextLine()) {
         commandRouter.route(scanner.nextLine())
     }
