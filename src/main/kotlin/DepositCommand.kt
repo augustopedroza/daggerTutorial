@@ -3,7 +3,6 @@ import java.math.BigDecimal
 import javax.inject.Inject
 
 class DepositCommand @Inject constructor(private val database: Database, private val outputter: Outputter) : Command {
-    override val key = "deposit"
 
     override fun handleInput(input: List<String>): Status {
         if (input.size != 2) {
