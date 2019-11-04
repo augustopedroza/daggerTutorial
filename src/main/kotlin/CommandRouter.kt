@@ -1,6 +1,7 @@
 import Command.*
+import javax.inject.Inject
 
-class CommandRouter {
+class CommandRouter @Inject constructor() {
     private val commands = emptyMap<String, Command>()
 
     fun route(input: String): Status {
