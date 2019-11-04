@@ -1,13 +1,7 @@
 import Command.*
 import javax.inject.Inject
 
-class CommandRouter {
-    private val commands = mutableMapOf<String, Command>()
-
-    @Inject
-    constructor (command: Command) {
-        commands[command.key] = command
-    }
+class CommandRouter @Inject constructor(private var commands: MutableMap<String, Command>) {
 
     fun route(input: String): Status {
         val splitInput = input.split(Regex("\\s+"))
@@ -23,7 +17,6 @@ class CommandRouter {
             println("$commandKey: invalid arguments");
         }
         return status;
-
     }
 
     private fun invalidCommand(input: String): Command.Status {
