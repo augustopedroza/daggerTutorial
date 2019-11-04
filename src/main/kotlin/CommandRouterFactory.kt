@@ -1,7 +1,6 @@
-import CommandRouter
 import dagger.Component
 
-@Component
+@Component(modules = [HelloWorldModule::class])
 interface CommandRouterFactory {
     fun router(): CommandRouter
 }
