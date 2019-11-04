@@ -10,7 +10,7 @@ class CommandRouter {
     }
 
     fun route(input: String): Status {
-        val splitInput = input.split("\\s+")
+        val splitInput = input.split(Regex("\\s+"))
         if (splitInput.isEmpty()) {
             return invalidCommand(input)
         }
