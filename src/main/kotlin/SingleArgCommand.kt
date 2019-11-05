@@ -1,4 +1,3 @@
-import Command.Status
 import Command.Result
 
 abstract class SingleArgCommand: Command {
