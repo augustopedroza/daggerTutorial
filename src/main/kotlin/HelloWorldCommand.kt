@@ -1,5 +1,5 @@
 import javax.inject.Inject
-import Command.*
+import Command.Result
 
 class HelloWorldCommand @Inject constructor(private var outputter: Outputter): Command {
 

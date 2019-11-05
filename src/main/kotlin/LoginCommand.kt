@@ -7,7 +7,7 @@ class LoginCommand @Inject constructor(private val database: Database,
 
     public override fun handleArg(username: String): Result {
         val account = database.getAccount(username)
-        outputter.output("$username is logged in with balance ${account.balance()}")
+        outputter.output("$username is logged in with balance ${account.balance}")
         return Result.enterNestedCommandSet(
             userCommandsRouterFactory.create(account).router())
     }
