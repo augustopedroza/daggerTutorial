@@ -3,6 +3,7 @@ import dagger.Module
 import dagger.Subcomponent
 import Database.Account
 
+@PerSession
 @Subcomponent(modules = [UserCommandsModule::class])
 interface UserCommandsRouter {
     fun router(): CommandRouter
