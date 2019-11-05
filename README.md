@@ -1,6 +1,6 @@
 # Dagger Tutorial in Kotlin
 
-A new [dagger tutorial](https://dagger.dev/tutorial/) has been release and it does a great job at presenting many of the dagger capabilities. Since the sample code is in java and only presents the final solution. I decided to put together a kotlin version and also made sure each brach represents a page in the tutorial.
+A new [dagger tutorial](https://dagger.dev/tutorial/) has been release and it does a great job at presenting many of its capabilities. Since the sample code is in java and only presents the final solution, I decided to put together a kotlin version and also made sure each branch represents a page in the tutorial.
 
 Recommended branch order follows the same title of the tutorial pages:
 1. InitialDaggerSetup
