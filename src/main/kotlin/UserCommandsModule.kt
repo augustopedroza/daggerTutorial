@@ -5,7 +5,7 @@ import dagger.Binds
 import dagger.Module
 
 @Module
-abstract class UserCommandsModules {
+abstract class UserCommandsModule {
     @Binds
     @IntoMap
     @StringKey("deposit")
