@@ -5,7 +5,8 @@ import javax.inject.Singleton
 @Component(modules = [HelloWorldModule::class,
     LoginCommandModule::class,
     SystemOutModule::class,
-    UserCommandsRouter.InstallationModule::class])
+    UserCommandsRouter.InstallationModule::class,
+    AmountsModule::class])
 interface CommandProcessorFactory {
     fun processor(): CommandProcessor
 }

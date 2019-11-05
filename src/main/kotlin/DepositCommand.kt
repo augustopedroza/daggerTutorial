@@ -7,6 +7,6 @@ class DepositCommand @Inject constructor(private val account: Account, private v
 
     override fun handleAmount(amount: BigDecimal) {
         account.deposit(amount)
-        outputter.output(account.username() + " now has: " + account.balance())
+        outputter.output(account.username + " now has: " + account.balance)
     }
 }

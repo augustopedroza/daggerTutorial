@@ -15,16 +15,12 @@ class Database @Inject constructor() {
     class Account(internal val username: String) {
         internal var balance = BigDecimal.ZERO
 
-        fun username(): String {
-            return username
-        }
-
-        fun balance(): BigDecimal {
-            return balance
-        }
-
         fun deposit(amount: BigDecimal) {
             balance += amount
+        }
+
+        fun withdraw(amount: BigDecimal) {
+            balance -= amount
         }
     }
 }
