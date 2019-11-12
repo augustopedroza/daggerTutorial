@@ -17,4 +17,4 @@ Recommended branch order follows the same title of the tutorial pages:
 12. EnforcingTheMaximumWithdrawlAcrossCommands
 13. AvoidingRecursiveLogins
 
-No optimizations have been made to this code. This is fruit of a pesonal study session.
+No optimizations have been made to this code. This is the fruit of a pesonal study session.
